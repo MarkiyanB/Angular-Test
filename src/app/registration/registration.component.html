@@ -1,0 +1,14 @@
+<div>
+<h1>Registration</h1>
+<hr>
+<h3>Email</h3>
+<input type="email" class="form-control mb-2 mr-sm-2" [(ngModel)]="anEmail">
+<h3>Password</h3>
+<input type="password" class="form-control mb-2 mr-sm-2" [(ngModel)]="anPassword">
+<button class="btn btn-primary" (click)="addUser()">Add</button>
+
+  <div *ngFor="let user of users" [userItem] = "user">
+    <p> Email {{userItem.email}} Password {{userItem.password}}</p>
+  </div>
+
+
